@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flux-argo-configmap
+data:
+  myvalue: "Flux Argo Test"
