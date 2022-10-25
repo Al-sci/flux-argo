@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: flux-argo
+  namespace: flux-system
+spec:
+  interval: 5m
+  releaseName: flux-argo
+  chart:
+    spec:
+      chart: ./charts/
+      sourceRef:
+        kind: GitRepository
+        name: flux-argo
+  valuesFrom:
+    - kind: ConfigMap
+      name: flux-argo-values
