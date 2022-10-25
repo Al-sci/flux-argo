@@ -6,6 +6,6 @@ resources:
 configMapGenerator:
   - name: flux-argo-values
     files:
-      - values.yaml=my-values.yaml
+      - ./charts/values.yaml
 configurations:
   - kustomizeconfig.yaml
