@@ -4,14 +4,14 @@ metadata:
   name: podinfo
   namespace: flux-system
 spec:
-  interval: 5m
-  releaseName: podinfo
+  interval: 1m
+  releaseName: podinfo-release
   chart:
     spec:
       chart: podinfo
       sourceRef:
         kind: HelmRepository
-        name: podinfo
+        name: podinfo-app
   valuesFrom:
     - kind: ConfigMap
       name: podinfo-values
