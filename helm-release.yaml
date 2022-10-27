@@ -8,10 +8,10 @@ spec:
   releaseName: podinfo-release
   chart:
     spec:
-      chart: podinfo
+      chart: ./charts/podinfo
       sourceRef:
-        kind: HelmRepository
-        name: podinfo-app
+        kind: GitRepository
+        name: podinfo
   valuesFrom:
     - kind: ConfigMap
       name: podinfo-values
