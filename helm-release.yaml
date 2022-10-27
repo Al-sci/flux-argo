@@ -6,7 +6,6 @@ metadata:
 spec:
   interval: 1m
   releaseName: podinfo-release
-  timeout: 10s
   chart:
     spec:
       chart: ./charts/podinfo
